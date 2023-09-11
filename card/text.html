@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Owl Carousel with Bootstrap 5</title>
+  <!-- Link to Bootstrap 5 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <style>
+    /* Custom button style */
+    .owl-nav button.owl-prev,
+    .owl-nav button.owl-next {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      padding: 10px 15px;
+      font-size: 24px;
+    }
+
+    .owl-nav button.owl-prev:hover,
+    .owl-nav button.owl-next:hover {
+      background-color: #0056b3;
+    }
+
+    /* Card style */
+    .card {
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .card-img-top {
+      max-height: 200px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="owl-carousel owl-theme">
+      <div class="item">
+        <div class="card">
+          <img src="https://picsum.photos/id/100/800/600" alt="Owl" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Card Title 1</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Button 1</a>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="card">
+          <img src="https://picsum.photos/id/101/800/600" alt="Owl" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Card Title 2</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Button 2</a>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="card">
+          <img src="https://bluetokaicoffee.com/cdn/shop/products/Gifting_04.jpg?v=1652346303"
+                        class="card-img-top" alt="...">
+          <div class="card-body">
+                <div class="BBcard-body-title">
+                    <h5 class="card-title">Coffee Combo 4 Pack - (4X75gm)</h5>
+                </div>
+                <div class="BBcard-body-text">
+                    <p class="card-text">Rs .799 </p>
+                </div>
+                <div class="BBcard-body-btn">
+                    <a href="#" class="btn btn-primary ">
+                        <img src="img/add-to-cart.png" class="" alt="" height="15px">
+                        Add To Cart
+                    </a>
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Link to jQuery (required for Owl Carousel) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Link to Owl Carousel JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      dots: false,
+      autoplay: true,
+      autoplayTimeout: 3000,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 2
+        },
+        1000: {
+          items: 3
+        }
+      }
+    });
+  </script>
+</body>
+</html>
